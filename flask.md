@@ -1,0 +1,14 @@
+Flask
+http://garmoncheg.blogspot.com/2018/03/run-flask-with-debug-in-pycharm.html
+
+## env/bin/flask
+    #!/Users/govindaraju/opt/anaconda3/bin/python3.8
+    # -*- coding: utf-8 -*-
+    import re
+    import sys
+
+    from flask.cli import main
+
+    if __name__ == '__main__':
+        sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+        sys.exit(main())
